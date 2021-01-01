@@ -9,28 +9,17 @@ namespace PrimAlgorithm.Abstraction
     internal class Edge : IComparable<Edge>
     {
         private int Weight { get; set; }
-        private Vertex From;
-        private Vertex To;
-
-        public Edge()
-        {
-            //
-        }
+        private Vertex From { get; set; }
+        private Vertex To { get; set; }
 
         public Edge(Vertex from,Vertex to, int weight)
         {
             this.From = from;
             this.To = to;
             this.Weight = weight;
-        }
-
-        /*public void AddEdge(int fromName, int toName, int weight)
-        {
-            this.From = new Vertex(fromName);
-            this.To = new Vertex(toName);
-            this.Weight = weight;
             From.AddSubset(To);
-        }*/
+            To.AddSubset(From);
+        }
 
         public Vertex GetFromVertex()
         {

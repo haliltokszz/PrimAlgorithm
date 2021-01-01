@@ -12,21 +12,11 @@ namespace PrimAlgorithm.Abstraction
         private int VisitedNo { get; set; }
         private List<Vertex> subsets = new List<Vertex>();
 
-        public Vertex()
-        {
-            //
-        }
         public Vertex(int name)
         {
             this.Name = name;
             this.VisitedNo = 0;
         }
-        
-        /*public Vertex AddVertex(int name)
-        {
-            this.Name = name;
-            return this;
-        }*/
 
         public int GetName()
         {
